@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/gauche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="69dp"
+        android:onClick="goGch"
+        android:text="Gauche"
+        app:layout_constraintEnd_toStartOf="@+id/droite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMur"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/droite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="84dp"
+        android:onClick="goDrt"
+        android:text="Droite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gauche"
+        app:layout_constraintTop_toBottomOf="@+id/imgMur"></Button>
+
+    <TextView
+        android:id="@+id/nomPiece"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="182dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imgMur"
+        android:layout_width="245dp"
+        android:layout_height="256dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="83dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomPiece"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/creat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="27dp"
+        android:onClick="returnCrea"
+        android:text="Créer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/chgPiece"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="160dp"
+        android:onClick="chgPiece"
+        android:text="Changer piece"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gauche" />
+</androidx.constraintlayout.widget.ConstraintLayout>
